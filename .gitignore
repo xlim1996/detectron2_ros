@@ -22,6 +22,8 @@ build/
 devel/
 dist/
 wheels/
+CmakeFiles/
+CMakeCache.txt
 
 # pytorch/python/numpy formats
 *.pth
