@@ -1,5 +1,5 @@
 # detectron2_ros
-This is a detecron2 ros package that uses VitDet as an instance segmentation method.
+This is a detecron2 ros package that uses VitDet(LVIS with selected object classes) as an instance segmentation method. 
 # How to use detectron2_ros:
   ## 1. Please follow the following link to install ROS(noetic).
     http://wiki.ros.org/noetic/Installation/Ubuntu
@@ -24,3 +24,9 @@ This is a detecron2 ros package that uses VitDet as an instance segmentation met
     source devel/setup.bash
   ## 7. Running the node
     roslaunch detectron2_ros detectron2_ros.launch
+  ## 8. How Change selected object classes
+Go to the directory "src/detectron2_ros/detectron2/data/datasets". There are four files you need to understand: lvis_own_categories.py, lvis_own_category_image_count.py, lvis_v1_categories.py, and lvis_v1_category_image_count.py.
+lvis_v1_categories.py contains all the object classes in the LVIS dataset, and lvis_v1_category_image_count.py contains the corresponding number of images for each class.
+lvis_own_categories.py includes the object classes we have selected, and lvis_own_category_image_count.py contains the respective number of images for those selected classes.
+If you wish to change the selected object classes, you need to obtain the object classes from lvis_v1_categories.py and their corresponding image counts from lvis_v1_category_image_count.py. Then, copy this information to lvis_own_categories.py and lvis_own_category_image_count.py, respectively.
+    
