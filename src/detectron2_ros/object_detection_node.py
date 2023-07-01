@@ -15,7 +15,6 @@ import os
 import matplotlib.pyplot as plt
 from PIL import Image
 import open3d as o3d
-import argparse
 
 
 from detectron2.checkpoint import DetectionCheckpointer
@@ -41,9 +40,9 @@ class Detectron2ROSNode:
 
     def load_model(self):
         #load the model
-        config_model='src/detectron2_ros/projects/ViTDet/configs/LVIS/cascade_mask_rcnn_vitdet_h_100ep.py'
-        config_class = 'src/detectron2_ros/projects/ViTDet/configs/LVIS_MIX/cascade_mask_rcnn_vitdet_h_100ep.py'
-        checkpoints='src/detectron2_ros/checkpoints/ViTDet/model_final_11bbb7.pkl'
+        config_model='../detectron2_ros/src/detectron2_ros/projects/ViTDet/configs/LVIS/cascade_mask_rcnn_vitdet_h_100ep.py'
+        config_class = '../detectron2_ros/src/detectron2_ros/projects/ViTDet/configs/LVIS_MIX/cascade_mask_rcnn_vitdet_h_100ep.py'
+        checkpoints='../detectron2_ros/src/detectron2_ros/checkpoints/ViTDet/model_final_11bbb7.pkl'
         cfg = LazyConfig.load(config_class)
         metadata = MetadataCatalog.get(cfg.dataloader.train.dataset.names) # to get labels from ids
         classes = metadata.thing_classes
