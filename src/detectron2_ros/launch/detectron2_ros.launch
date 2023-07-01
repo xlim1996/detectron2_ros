@@ -1,4 +1,4 @@
 <launch>
-  <!-- 启动objectdetection.py节点 -->
+  <!-- start Detectron2ROSNode-->
   <node name="Detectron2ROSNode" pkg="detectron2_ros" type="object_detection_node.py" output="screen"  />
 </launch>
