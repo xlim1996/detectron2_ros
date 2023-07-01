@@ -4,7 +4,7 @@ This is a detecron2 ros package that uses VitDet(LVIS with selected object class
   ## 1. Please follow the following link to install ROS(noetic).
     http://wiki.ros.org/noetic/Installation/Ubuntu
   ## 2. Git clone the repository
-    git clone git@github.com:xlim1996/detectron2.git
+    git clone git@github.com:xlim1996/detectron2_ros.git
     cd detectron2_ros  
   ## 3. Install conda environment:
     conda env create -f env.yml
