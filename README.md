@@ -8,6 +8,7 @@ This is a detecron2 ros package that uses VitDet as an instance segmentation met
     cd detectron2_ros  
   ## 3. Install conda environment:
     conda env create -f env.yml
+    conda activate detectron2_ros
     cd src/detectron2_ros
     pip install -e .
     pip install pyzed
