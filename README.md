@@ -11,7 +11,7 @@ This is a detecron2 ros package that uses VitDet(LVIS with selected object class
     conda activate detectron2_ros
     cd src/detectron2_ros
     pip install -e .
-    pip install pyzed
+    pip install pyzed(If you need to used zed camera)
   ## 3. Download the checkpoints and put it into src/detectron2_ros/checkpoints/ViTDet. Here is the link:
     https://dl.fbaipublicfiles.com/detectron2/ViTDet/LVIS/cascade_mask_rcnn_vitdet_h/332552778/model_final_11bbb7.pkl
   ### If you want to use a different model, please change the checkpoints path and config file in object_detection_node.py(ROS node + detectron2),vitdet_pcl.py and vitdet_image.py(detectron2 only)
